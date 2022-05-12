@@ -10,6 +10,7 @@ for(let i = 1; i < guess.length -1; ++i) {
   guess[i] = '_';
 }
 document.getElementById("guess").innerHTML = guess.join(" ");
+
 function check() {
     let letter = document.getElementById("get").value;
     document.getElementById("get").value = "";
@@ -21,7 +22,7 @@ function check() {
         } 
       }
     } else {
-      --lives;
+      lives--;
       document.getElementById("lives").innerHTML = `Tries left: ${lives}`;
     }
     if(guess.length == x) {
